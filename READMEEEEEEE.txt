@@ -5,8 +5,8 @@ This project consists of a NodeMCU-based sensor system that monitors environment
 ## Hardware Requirements
 
 ### Components
-1. NodeMCU ESP8266
-2. DHT11 Temperature and Humidity Sensor
+1. NodeMCU ESP8266 (ONLY CONNECTS TO 2.4ghz internet)
+2. DHT11 Temperature and Humidity Senor
 3. MQ-4 Gas Sensor (for CO2 and Ethylene detection)
 4. Jumper wires
 5. Breadboard
