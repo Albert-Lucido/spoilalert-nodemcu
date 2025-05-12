@@ -7,18 +7,17 @@ This project consists of a NodeMCU-based sensor system that monitors environment
 ### Components
 1. NodeMCU ESP8266 (ONLY CONNECTS TO 2.4ghz internet)
 2. DHT11 Temperature and Humidity Sensor
-3. MQ-4 Gas Sensor (for CO2 and Ethylene detection)
-4. Jumper wires
+3. MQ-135 Gas Sensor (for CO2 and Ethylene detection)
+4. Cables
 5. Breadboard
 6. USB cable (Micro USB)
-7. Power supply (5V)
 
 ### Pin Connections
-- DHT11:
+- DHT11 - NODEMCU
   - VCC → 3.3V
-  - DATA → D4 (GPIO4)
+  - DATA → D2 (GPIO4)
   - GND → GND
-- MQ-4:
+- MQ-135
   - VCC → 3.3V
   - AOUT → A0
   - GND → GND
@@ -59,7 +58,7 @@ Install these libraries through Arduino IDE (Tools → Manage Libraries):
 
 ### 4. Server Setup
 1. Install [Node.js](https://nodejs.org/) (LTS version)
-2. Install [MongoDB](https://www.mongodb.com/try/download/community)
+2. Install [MongoDB](https://www.mongodb.com/try/download/community) OR go to the website and access the database there
 3. Clone this repository
 4. Navigate to project directory
 5. Install dependencies:
@@ -84,13 +83,13 @@ Install these libraries through Arduino IDE (Tools → Manage Libraries):
 2. Connect to this WiFi network
 3. A configuration portal will open automatically
 4. Enter your WiFi credentials
-5. Enter the server URL (e.g., http://your-server-ip:3000/api/data)
+5. Enter the server URL (e.g., http://your-ip-address:3000/api/data)
 6. Save the configuration
 
 ## Operation
 - The system will automatically:
   - Read temperature and humidity from DHT11
-  - Read gas levels from MQ-4
+  - Read gas levels from MQ-135
   - Determine vegetable type based on sensor readings
   - Send data to the server every 3 seconds
   - Store data in MongoDB database
